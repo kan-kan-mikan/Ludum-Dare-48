@@ -1,0 +1,91 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/fonts/Xolonium-Regular.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/minigames/breathing/breathing_minigame.gd" type="Script" id=2]
+
+[node name="Breathing" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0.709804, 0.709804, 0.709804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UI" type="Control" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instruction" type="Label" parent="UI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -582.5
+margin_top = -359.5
+margin_right = 582.5
+margin_bottom = 90.5
+custom_fonts/font = ExtResource( 1 )
+text = "Breathe In."
+align = 1
+valign = 1
+percent_visible = -0.111111
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AirBar" type="ProgressBar" parent="UI"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -640.0
+margin_top = -250.0
+margin_right = 640.0
+margin_bottom = -125.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UI/AirBar"]
+margin_right = 1280.0
+margin_bottom = 85.0
+custom_fonts/font = ExtResource( 1 )
+text = "Air: "
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StressBar" type="ProgressBar" parent="UI"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -640.0
+margin_top = -125.0
+margin_right = 640.0
+step = 0.01
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UI/StressBar"]
+margin_top = -2.0
+margin_right = 1280.0
+margin_bottom = 78.0
+custom_fonts/font = ExtResource( 1 )
+text = "Stress: "
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
